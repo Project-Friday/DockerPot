@@ -1,0 +1,10 @@
+version: "2.1"
+services:
+  honeypot:
+    restart: always
+    build: ./Honeypot/
+    hostname: "media-host"
+    ports:
+      - "22:22"
+    expose:
+      - "22"
