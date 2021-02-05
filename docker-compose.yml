@@ -1,10 +1,19 @@
 version: "2.1"
+networks:
+  honey_internal:
 services:
+  proxy_server:
+    image: datadog/squid
+    restart: always
+    expose:
+      - "3128"
+    networks:
+      - honey_internal 
   honeypot:
     restart: always
     build: ./Honeypot/
     hostname: "media-host"
     ports:
       - "22:22"
-    expose:
-      - "22"
+    networks:
+      - honey_internal

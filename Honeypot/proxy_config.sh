@@ -1,0 +1,6 @@
+export http_proxy="http://proxy_server:3128"
+export https_proxy="http://proxy_server:3128"
+export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+export HTTP_PROXY="http://proxy_server:3128"
+export HTTPS_PROXY="http://proxy_server:3128"
+export NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com"
